@@ -58,6 +58,7 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   position: relative;
+  padding-top: 80px;
 }
 
 /* Efeito de partículas de fundo */
@@ -145,13 +146,17 @@ a:hover {
 
 /* ===== HEADER MODERNO ===== */
 header {
-  background: rgba(26, 26, 46, 0.95);
+  background: rgba(26, 26, 46, 0.98);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
   transition: all var(--transition-medium);
+  box-sizing: border-box;
 }
 
 header::before {
@@ -536,6 +541,10 @@ footer p {
     padding: 1rem 0.5rem;
   }
   
+  body {
+    padding-top: 120px;
+  }
+  
   header .container {
     flex-direction: column;
     gap: 1.5rem;
@@ -577,6 +586,10 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 140px;
+  }
+  
   header .container {
     padding: 2rem 1rem;
   }
